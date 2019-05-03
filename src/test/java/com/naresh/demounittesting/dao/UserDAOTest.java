@@ -30,7 +30,7 @@ public class UserDAOTest {
 	}
 
 	@Test
-	public void testInValidLogin() {
+	public void testInvalidLogin() {
 		User userObj = new User();
 		userObj.setEmail("nareshkumarh@live.com");
 		userObj.setPassword("pass123");

@@ -26,7 +26,7 @@ public class UserServiceTest {
 	private UserService userService;
 
 	@Mock
-	private UserDAO userDAO;
+	private UserDAO userDAOMock;
 
 	@Before
 	public void setUp() {
@@ -39,7 +39,7 @@ public class UserServiceTest {
 		User user1 = new User();
 		user1.setEmail("nareshkumarh@live.com");
 		user1.setPassword("pass123$");
-		Mockito.when(userDAO.login((User) any(User.class))).thenReturn(user1);
+		Mockito.when(userDAOMock.login((User) any(User.class))).thenReturn(user1);
 
 
 		UserDTO userObj = new UserDTO();
@@ -56,7 +56,7 @@ public class UserServiceTest {
 		userObj.setEmail("nareshkumarh@live.com");
 		userObj.setPassword("pass123");
 
-		Mockito.when(userDAO.login((User) any(User.class))).thenReturn(null);
+		Mockito.when(userDAOMock.login((User) any(User.class))).thenReturn(null);
 		User user = userService.login(userObj);
 
 	}

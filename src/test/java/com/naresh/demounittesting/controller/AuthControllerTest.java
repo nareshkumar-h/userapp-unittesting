@@ -48,7 +48,6 @@ public class AuthControllerTest {
 	@Test
 	public void testLogin() throws Exception {
 		User userObj = new User();
-
 		userObj.setEmail("nareshkumarh@live.com");
 		userObj.setPassword("pass123$");
 		when(userServiceMock.login(any(UserDTO.class))).thenReturn(userObj);
